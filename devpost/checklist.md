@@ -13,7 +13,7 @@ Current 5-build plan after the prototype already existed. This is reconciliation
 
 ## Slices
 
-- [ ] **1. Reconcile and verify the existing rough-idea-to-reusable-prompt workflow**
+- [x] **1. Reconcile and verify the existing rough-idea-to-reusable-prompt workflow**
   Becomes usable: The already-existing composition loop is verified against current approved requirements, with honest dated evidence and any necessary repair. No new feature or original-build claim.
   Why now: This is the core kernel end to end; one coherent reconciliation slice avoids inventing extra development steps for an already-built small app.
   PRD ref: `prd.md > The Core Journey`, `prd.md > Acceptance Criteria`, `prd.md > States and Boundaries`
@@ -36,7 +36,7 @@ Owner must actually try the app; agent-only tests or approval of a plan do not s
 
 Actual owner report received 2026-10-01: guided fields understandable, rough idea to organized result usable, audience/tone/format aligned. No further defects or requested revisions reported. Owner explicitly requests proceeding with final records, map and shipping checks. See verification.md for the distinction between app-generated prompts and reported downstream marketing material.
 
-Current mechanical verification: devpost/verification.md records the 2026-10-01 Chrome/Playwright localhost run, all 39 assertions passing and screenshot inspection. One actual repair removed a favicon 404 console warning. Slice box will be checked immediately after its verified reconciliation commit, not before.
+Current mechanical verification: devpost/verification.md records the 2026-10-01 Chrome/Playwright localhost run, all 39 assertions passing and screenshot inspection. One actual repair removed a favicon 404 console warning. Verified reconciliation committed as 05b921878b6553f8c7918f6a27e61ba2f5483386 on 2026-10-01; slice checked immediately afterwards. No original implementation or submission completion claim.
 
 ## Code Tour and App Map
 
