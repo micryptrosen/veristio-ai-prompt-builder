@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>AI Prompt Builder - App Map</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.6 system-ui, sans-serif; color: #202b2d; background: #fff; }
+    main { max-width: 900px; margin: auto; padding: 24px; }
+    h1 { font-size: 28px; } h2 { font-size: 21px; margin-top: 32px; }
+    code { overflow-wrap: anywhere; } a { color: #08685e; }
+    .route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 0; list-style: none; }
+    .route li { border-top: 4px solid #14766b; padding-top: 12px; }
+    .route li:nth-child(2) { border-color: #ad6c17; }
+    .route li:nth-child(3) { border-color: #646275; }
+    @media (max-width: 600px) { .route { grid-template-columns: 1fr; } main { padding: 20px; } }
+  </style>
+</head>
+<body><main>
+  <h1>AI Prompt Builder</h1>
+  <p>A small browser-only composition tool: guided fields become a reusable prompt and review checklist. It does not run an AI model or generate the eventual answer.</p>
+  <h2>One Action, Three Stops</h2>
+  <p>Reference route, not a record of an interactive code tour.</p>
+  <ol class="route">
+    <li><strong>1. Enter an idea</strong><br><code>index.html: #prompt-form</code><br>Eight labeled fields capture the task and supporting ingredients.</li>
+    <li><strong>2. Organize the ingredients</strong><br><code>app.js: getValues, buildPrompt, buildChecklist</code><br>Trim values, preserve supplied text, skip blank optional sections and add output/review instructions.</li>
+    <li><strong>3. See reusable text</strong><br><code>app.js: generatePrompt</code><br>Render text safely into <code>#prompt-output</code> and list review items. Copy and reset are separate controls.</li>
+  </ol>
+  <h2>To Change This, Start Here</h2>
+  <ul>
+    <li>Input labels/options: <code>index.html</code>, anchors <code>goal</code>, <code>tone</code>, <code>output-format</code>.</li>
+    <li>Prompt headings/default instructions: <code>app.js: buildPrompt</code>. Update <code>devpost/prd.md</code> and verify changed output.</li>
+    <li>Review items: <code>app.js: buildChecklist</code>.</li>
+    <li>Clipboard fallback: <code>app.js: selectPromptText</code> and <code>copyButton.addEventListener</code>; test both successful copy and denial.</li>
+    <li>Layout: <code>styles.css</code>. Check desktop and narrow widths after edits.</li>
+    <li>The actual reconciliation repair: empty inline favicon in <code>index.html</code> prevents an unnecessary favicon 404 request.</li>
+  </ul>
+  <h2>A Practice to Reuse</h2>
+  <p>Connect a real owner decision to an observable result. Here, <code>devpost/prd.md: Acceptance Criteria</code> requires supplied ingredients to survive generation. <code>buildPrompt</code> implements that; <code>devpost/verification.md</code> records checks and owner usefulness feedback. These do not establish better downstream AI answers. On another project, keep the same decision-to-check trail and state what it cannot establish.</p>
+  <h2>Run and Return</h2>
+  <p>The app supports opening <code>index.html</code> directly. For the reviewed HTTP workflow, from the repository run <code>python -m http.server 8404 --bind 127.0.0.1</code> if Python is available, then visit <code>http://127.0.0.1:8404/</code>. Stop the temporary server after use. This map is standalone HTML with no scripts or network dependencies.</p>
+  <p>Snapshot: 2026-10-01 current Skill Pack rerun/reconciliation after the prototype existed, not original pre-build planning. Source baseline <code>41f009577134b71cada82a3e94279d7e3e557d2e</code> plus the documented favicon repair. This guide can drift after later changes; use stable anchors and current evidence.</p>
+</main></body>
+</html>

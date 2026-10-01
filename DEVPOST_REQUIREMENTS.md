@@ -1,17 +1,17 @@
 # Submission Readiness
 
-Submission status: HELD / NOT PERFORMED. This export remains local until separately approved public repository creation and push.
+Submission status: HELD / NOT PERFORMED. The public GitHub repository already exists; no deployment or new video upload is needed for this readiness review.
 
 ## Recorded Requirements
 
-The following summarize rules evidence recorded on 2026-09-30, not a current rules verification:
+Official rules at https://learn-ai-basics.devpost.com/rules read on 2026-10-01 during this current reconciliation. Exact live form prompts and eligibility must still be checked before submission; this is not a compliance ruling.
 
 - Public source repository containing a functional project and run instructions.
 - Visible open-source license; this export includes MIT `LICENSE`.
 - Text description of project features and functionality.
 - Public YouTube or Vimeo demonstration under three minutes.
 - Compliance with new-project, original-work, eligibility, and source-rights requirements.
-- Confirm exact Devpost Learn Skill Pack/planning requirements and additional submission-form fields before submission.
+- Working new project using the Devpost Learn Skill Pack with scope.md, prd.md and spec.md; additional live form fields must still be reviewed.
 
 ## Available Evidence
 
@@ -19,8 +19,10 @@ The following summarize rules evidence recorded on 2026-09-30, not a current rul
 - Run instructions and features: `README.md`.
 - Demonstration script: `DEMO_SCRIPT.md`.
 - Source boundaries: `SOURCE_CUSTODY.md`.
-- Owner-reported public demo: https://youtu.be/6lem4K_B9V8. Uploaded playback, visibility, duration, and platform metadata are not independently verified.
+- Public repository: https://github.com/micryptrosen/veristio-ai-prompt-builder.
+- Owner-published public demo: https://youtu.be/6lem4K_B9V8. Anonymous Chrome playback observed 2026-10-01; player duration 62.941 seconds. Inspected frames show inputs, organized prompt, checklist and copy control; no exhaustive media-rights/every-frame audit claimed.
+- Current official Skill Pack planning/build reconciliation: devpost/scope.md, prd.md, spec.md, checklist.md, verification.md and app-map.html. This occurred after the first prototype existed, not original pre-build planning.
 
 ## Remaining Work
 
-Recheck current rules and form requirements before any approved public action or submission. Verify public demo playback, repository access, and a clean-clone local run. Finalize descriptions, planning evidence, entrant/team eligibility, and any required declarations. Public repo creation/push and Devpost submission require separate approval. No internal evidence or local capture files are included in this export.
+Owner must write submission answers and required exit-survey responses; earlier AI-written drafts do not meet that requirement. Review actual form prompts, confirm eligibility and source/media rights, and resolve whether organizers accept the disclosed later reconciliation. Recheck rules immediately before a separately authorized submission. See devpost/shipping-readiness.md. Do not claim the entire curriculum/submission is complete; Devpost remains held. No personal learner profile, raw captures or installed curriculum is included in publication.

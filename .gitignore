@@ -4,6 +4,7 @@ dist/
 build/
 
 # Local environment
+/devpost/learner-profile.md
 .env
 .env.*
 !.env.example

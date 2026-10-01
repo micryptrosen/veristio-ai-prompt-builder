@@ -20,7 +20,7 @@ Open `http://127.0.0.1:8080/`. No dependency installation, account, API key, or 
 
 ## Demo
 
-[Watch the demo](https://youtu.be/6lem4K_B9V8). Public publication was reported by the owner; uploaded playback and metadata have not been independently verified.
+[Watch the demo](https://youtu.be/6lem4K_B9V8). Owner-published; anonymous browser playback and representative workflow frames were checked on 2026-10-01. Reported player duration: 62.941 seconds.
 
 ## Limitations
 
@@ -29,6 +29,8 @@ A local prompt composition tool, distinct from the learning challenge. It compos
 ## Project Notes
 
 See `ROADMAP.md`, `DEMO_SCRIPT.md`, `DEVPOST_REQUIREMENTS.md`, and `SOURCE_CUSTODY.md`. This repository is a fresh publication snapshot of an independently developed local prototype; its first commit does not represent the beginning of development. Devpost submission has not been performed.
+
+The `devpost/` documents record a current official Skill Pack rerun/reconciliation on 2026-10-01 **after the first prototype existed**, not original pre-build planning. See `devpost/verification.md`, `devpost/checklist.md`, and `devpost/shipping-readiness.md` for actual checks and remaining gates. `devpost/app-map.html` is an offline reference guide, not part of the app. Personal learner context and raw local captures are excluded from publication.
 
 ## License
 
