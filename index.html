@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veristio AI Prompt Builder</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="app-title">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Entry 04 - AI Prompt Builder</p>
+            <h1 id="app-title">Build a reusable prompt</h1>
+          </div>
+          <div class="status-pill" id="copy-status" aria-live="polite">Local only</div>
+        </header>
+
+        <form id="prompt-form" class="builder-grid">
+          <section class="panel form-panel" aria-label="Prompt inputs">
+            <div class="section-heading">
+              <h2>Prompt ingredients</h2>
+              <p>Fill the fields that matter. Empty fields are skipped.</p>
+            </div>
+
+            <label>
+              <span>Goal</span>
+              <textarea id="goal" rows="3" placeholder="What should the AI help accomplish?"></textarea>
+            </label>
+
+            <label>
+              <span>Context</span>
+              <textarea id="context" rows="3" placeholder="Background, situation, audience facts, or decision context."></textarea>
+            </label>
+
+            <label>
+              <span>Audience</span>
+              <input id="audience" type="text" placeholder="Who is the output for?">
+            </label>
+
+            <label>
+              <span>Constraints</span>
+              <textarea id="constraints" rows="3" placeholder="Limits, must-haves, exclusions, format rules, or boundaries."></textarea>
+            </label>
+
+            <div class="split-row">
+              <label>
+                <span>Tone</span>
+                <select id="tone">
+                  <option value="">Choose tone</option>
+                  <option>Clear and practical</option>
+                  <option>Warm and reassuring</option>
+                  <option>Concise and executive</option>
+                  <option>Patient and instructional</option>
+                  <option>Neutral and analytical</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Output format</span>
+                <select id="output-format">
+                  <option value="">Choose format</option>
+                  <option>Step-by-step plan</option>
+                  <option>Draft email</option>
+                  <option>Checklist</option>
+                  <option>Comparison table</option>
+                  <option>Markdown brief</option>
+                  <option>JSON outline</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span>Examples or source notes</span>
+              <textarea id="source-notes" rows="3" placeholder="Paste short public-safe notes, examples, or facts the prompt should consider."></textarea>
+            </label>
+
+            <label>
+              <span>Review checklist focus</span>
+              <textarea id="review-focus" rows="3" placeholder="What should the AI check before finalizing the answer?"></textarea>
+            </label>
+
+            <div class="button-row">
+              <button type="submit" class="primary">Generate prompt</button>
+              <button type="button" id="copy-button">Copy prompt</button>
+              <button type="button" id="sample-button">Load sample</button>
+              <button type="reset" id="reset-button">Reset</button>
+            </div>
+          </section>
+
+          <section class="panel output-panel" aria-label="Generated prompt">
+            <div class="section-heading">
+              <h2>Structured prompt</h2>
+              <p>Copy this into your AI tool when you are ready.</p>
+            </div>
+
+            <pre id="prompt-output" tabindex="0">Complete the form, then choose Generate prompt.</pre>
+
+            <div class="checklist-card">
+              <h3>Generated checklist</h3>
+              <ul id="checklist-output">
+                <li>Define the task clearly.</li>
+                <li>Add enough context for a useful answer.</li>
+                <li>Set constraints and output expectations.</li>
+              </ul>
+            </div>
+
+            <aside class="note">
+              This prototype does not call an AI service or store your input. It assembles a reusable prompt locally in this browser.
+            </aside>
+          </section>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
