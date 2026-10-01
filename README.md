@@ -1,6 +1,16 @@
 # AI Prompt Builder
 
-A dependency-free local browser prototype for Build With AI Hackathon #2.
+A dependency-free local Veristio prototype, preserved beyond its original hackathon effort.
+
+## Accepted Usefulness Update - 2026-10-01
+
+Generated field review distinguishes user-supplied inputs, omitted sections and app-default goal/review focus. Shared app-authored instructions are identified. Copied prompt retains the metadata and reset clears it; original prompt defaults remain unchanged.
+
+The product owner accepted this bounded repair in the governed product home. It is now prepared in this local publication mirror; this preparation does not claim the new commit has been pushed. Owner acceptance is not production or customer validation.
+
+Local prompt assembly only, not an AI-generated answer or a guarantee of response quality. Project Designer and Book 19 are concept/reference sources only. Historical Skill Pack evidence is post-prototype reconciliation, not original planning.
+
+The demo below records the older prototype, before this repair. No video was rerecorded or uploaded for this update, and playback was not freshly checked. Devpost submission was abandoned due to owner-assessed qualification risk; no submission occurred.
 
 ## Features
 
@@ -30,7 +40,7 @@ A local prompt composition tool, distinct from the learning challenge. It compos
 
 See `ROADMAP.md`, `DEMO_SCRIPT.md`, `DEVPOST_REQUIREMENTS.md`, and `SOURCE_CUSTODY.md`. This repository is a fresh publication snapshot of an independently developed local prototype; its first commit does not represent the beginning of development. Devpost submission has not been performed.
 
-The `devpost/` documents record a current official Skill Pack rerun/reconciliation on 2026-10-01 **after the first prototype existed**, not original pre-build planning. See `devpost/verification.md`, `devpost/checklist.md`, and `devpost/shipping-readiness.md` for actual checks and remaining gates. `devpost/app-map.html` is an offline reference guide, not part of the app. Personal learner context and raw local captures are excluded from publication.
+The unchanged `devpost/` documents are archived evidence of the official Skill Pack rerun/reconciliation on 2026-10-01 **after the first prototype existed**, not original pre-build planning. They describe the older app snapshot, not this usefulness update. Their line anchors, app map and pending submission gates are historical, not current implementation or authorization. See `devpost/verification.md`, `devpost/checklist.md`, and `devpost/shipping-readiness.md` for that dated record. `devpost/app-map.html` is an archived offline guide, not part of the app. Personal learner context and raw local captures remain excluded; no retroactive eligibility is claimed.
 
 ## License
 

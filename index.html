@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Veristio AI Prompt Builder</title>
-    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -22,7 +21,7 @@
           <section class="panel form-panel" aria-label="Prompt inputs">
             <div class="section-heading">
               <h2>Prompt ingredients</h2>
-              <p>Fill the fields that matter. Empty fields are skipped.</p>
+              <p>Fill the fields that matter. Blank goal and review focus use defaults; other blank sections are skipped.</p>
             </div>
 
             <label>
@@ -97,6 +96,11 @@
             </div>
 
             <pre id="prompt-output" tabindex="0">Complete the form, then choose Generate prompt.</pre>
+
+            <section aria-labelledby="field-review-heading">
+              <h3 id="field-review-heading">Generated field review</h3>
+              <p class="note" id="field-review-output" aria-live="polite">No generated field review yet.</p>
+            </section>
 
             <div class="checklist-card">
               <h3>Generated checklist</h3>

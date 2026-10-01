@@ -1,24 +1,18 @@
 # Roadmap
 
-## Current Phase
+## Current Product Update - 2026-10-01
 
-First local static prototype implemented.
+Preserved non-hackathon Veristio prototype. The owner accepted this bounded repair in the governed product home; it is now prepared locally in the publication mirror:
 
-## Next Lawful Build Operation
+Generated field review distinguishes user-supplied inputs, omitted sections and app-default goal/review focus. Shared app-authored instructions are identified. Copied prompt retains the metadata and reset clears it; original prompt defaults remain unchanged.
 
-Run local review, tighten the demo story, and prepare for a later public-readiness audit.
+This local commit is not a claim of public push, new demo recording, customer validation or production readiness. Existing demo and MIT license remain preserved. Devpost submission route is abandoned/held/not performed due to owner-assessed qualification risk.
 
-## Next Improvements
+## Next Actions
 
-- Add a small template library for common everyday tasks.
-- Add local-only import/export of prompt drafts if owner approves persistence.
-- Improve keyboard navigation and mobile spacing after manual QA.
-- Add a public-readiness checklist before any remote or Devpost action.
-- Consider a tiny test harness if the app grows beyond simple static behavior.
+Review the local mirror diff and its verification evidence before any separately approved push. Subsequent product changes require a new bounded scope and owner approval; no speculative features are implemented or authorized here.
 
-## Later Gates
+## Boundaries
 
-- Confirm whether the first demo target should be small business, learning, or everyday productivity.
-- Run local checks.
-- Recheck Devpost rules before external action.
-- Request owner approval before any push, publication, demo upload, or submission.
+Local prompt assembly only, not an AI-generated answer or a guarantee of response quality. Project Designer and Book 19 are concept/reference sources only. Historical Skill Pack evidence is post-prototype reconciliation, not original planning.
+No backend, persistence, accounts, analytics, external AI integration, automatic publication or deployment is introduced. Keep private governance/evidence and source-reference content out of this mirror.

@@ -12,6 +12,7 @@ const fields = {
 const form = document.querySelector("#prompt-form");
 const promptOutput = document.querySelector("#prompt-output");
 const checklistOutput = document.querySelector("#checklist-output");
+const fieldReviewOutput = document.querySelector("#field-review-output");
 const copyButton = document.querySelector("#copy-button");
 const sampleButton = document.querySelector("#sample-button");
 const resetButton = document.querySelector("#reset-button");
@@ -98,6 +99,28 @@ function renderChecklist(items) {
   });
 }
 
+function buildFieldReview(values) {
+  const labels = {
+    goal: "Goal", context: "Context", audience: "Audience", constraints: "Constraints",
+    tone: "Tone", outputFormat: "Output format", sourceNotes: "Examples or source notes",
+    reviewFocus: "Review checklist focus"
+  };
+  const defaults = {
+    goal: "Help me complete the task described by the available context.",
+    reviewFocus: "Review for clarity, usefulness, and missing assumptions."
+  };
+  return [
+    "## Field Source Review (app-generated metadata)",
+    ...Object.entries(labels).map(([key, label]) => values[key]
+      ? `- ${label}: supplied by user.`
+      : defaults[key]
+        ? `- ${label}: not supplied; app default: ${defaults[key]}`
+        : `- ${label}: not supplied; section omitted.`),
+    "- Shared instructions: introduction, output expectations, base checklist and final instruction are app-authored; checklist wording also uses supplied audience, constraints and format when present.",
+    "This review describes the generated prompt inputs, not an AI answer or validation of prompt quality."
+  ].join("\n");
+}
+
 function updateStatus(message) {
   copyStatus.textContent = message;
 }
@@ -120,7 +143,9 @@ function selectPromptText() {
 function generatePrompt() {
   const values = getValues();
   const generatedPrompt = buildPrompt(values);
-  promptOutput.textContent = generatedPrompt;
+  const fieldReview = buildFieldReview(values);
+  promptOutput.textContent = generatedPrompt + "\n\n" + fieldReview;
+  fieldReviewOutput.textContent = fieldReview;
   renderChecklist(buildChecklist(values));
   updateStatus("Prompt ready");
 }
@@ -167,6 +192,7 @@ sampleButton.addEventListener("click", () => {
 resetButton.addEventListener("click", () => {
   window.setTimeout(() => {
     promptOutput.textContent = "Complete the form, then choose Generate prompt.";
+    fieldReviewOutput.textContent = "No generated field review yet.";
     renderChecklist([
       "Define the task clearly.",
       "Add enough context for a useful answer.",

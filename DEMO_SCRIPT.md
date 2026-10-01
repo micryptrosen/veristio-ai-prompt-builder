@@ -1,27 +1,21 @@
-# Demo Script
+# Demo Script - AI Prompt Builder
 
-Target length: under three minutes.
+Suggested future walkthrough: under three minutes. Existing recorded demo: https://youtu.be/6lem4K_B9V8.
+The recorded video predates this usefulness repair; this script is not evidence of a new recording or upload.
 
-## 0:00 - 0:20 Open
+## 0:00-0:25 - Open
 
-Show `index.html` opened locally. State that AI Prompt Builder helps a user turn scattered task details into a reusable prompt.
+Run the static app over localhost. Introduce it as a preserved Veristio prototype; no AI service, account or input storage is used.
 
-## 0:20 - 0:50 Load Sample
+## 0:25-1:55 - Accepted Repair
 
-Click `Load sample`. Point out the fields: goal, context, audience, constraints, tone, output format, source notes, and review focus.
+Generate with blank fields, then goal only: show supplied/default/omitted review. Fill optional fields or load the sample and compare. Copy the prompt and its metadata; reset clears the review.
 
-## 0:50 - 1:35 Generate Prompt
+## 1:55-2:35 - Copy and Reset
 
-Click `Generate prompt`. Show the structured prompt with task, context, audience, constraints, tone, source notes, output expectations, review criteria, and final instruction.
+Show the copy control and clipboard-denied/unavailable selection fallback. Confirm the copied text is the intended output, then reset the workspace.
 
-## 1:35 - 2:05 Review Checklist
+## 2:35-2:55 - Limits
 
-Show the generated checklist. Explain that it helps the user verify whether the AI response will fit the task and audience.
-
-## 2:05 - 2:35 Copy / Export
-
-Click `Copy prompt` if browser clipboard support is available. If blocked, select the generated text manually. Explain that the output is ready to paste into an AI tool.
-
-## 2:35 - 2:55 Boundaries
-
-Close by noting that the prototype runs locally, does not call an AI service, does not store user input, and remains separate from Entry 01's prompting challenge.
+Local prompt assembly only, not an AI-generated answer or a guarantee of response quality. Project Designer and Book 19 are concept/reference sources only. Historical Skill Pack evidence is post-prototype reconciliation, not original planning.
+No new publication or Devpost submission is performed by following this local walkthrough.

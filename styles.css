@@ -232,6 +232,15 @@ button.primary:hover {
   font-size: 0.92rem;
 }
 
+#field-review-heading {
+  margin-top: 16px;
+}
+
+#field-review-output {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 840px) {
   .app-shell {
     width: min(100% - 20px, 680px);

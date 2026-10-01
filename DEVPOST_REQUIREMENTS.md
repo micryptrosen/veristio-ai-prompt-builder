@@ -1,6 +1,12 @@
 # Submission Readiness
 
-Submission status: HELD / NOT PERFORMED. The public GitHub repository already exists; no deployment or new video upload is needed for this readiness review.
+## Current Non-hackathon Status - 2026-10-01
+
+The owner abandoned the submission route because required original Skill Pack workflow evidence was not established. This is an owner-assessed qualification risk, not an organizer rejection. Historical post-prototype Skill Pack reconciliation remains preserved, not original pre-build planning or retroactive eligibility.
+The local publication mirror now includes the accepted usefulness repair: Generated field review distinguishes user-supplied inputs, omitted sections and app-default goal/review focus. Shared app-authored instructions are identified. Copied prompt retains the metadata and reset clears it; original prompt defaults remain unchanged.
+Recorded requirements and remaining-work sections below are historical submission context, not current instructions to revive or submit the project. Existing video shows the older prototype. Any future public push or other external action requires separate approval; Devpost stays abandoned/held/not performed.
+
+Submission status: ABANDONED_DUE_TO_QUALIFICATION_RISK / HELD / NOT PERFORMED. Existing public repository and owner-published demo are preserved; no Devpost submission or new external action is authorized.
 
 ## Recorded Requirements
 
