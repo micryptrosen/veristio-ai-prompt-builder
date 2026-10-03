@@ -1,5 +1,11 @@
 # Demo Script - AI Prompt Builder
 
+## Current Maintenance Walkthrough - 2026-10-03
+
+Future walkthrough, under three minutes: Load sample and generate. Change audience/output format and clear context; attempt Copy before Generate. Confirm old prompt/review/checklist cleared, regenerate and inspect updated field metadata, copy or select current output, then reset.
+
+This replaces the older walkthrough emphasis below, not the recorded video's history. Existing demo predates this maintenance slice; no new video, upload or playback check is claimed. Describe narrow observable behavior, not customer/production readiness or guaranteed results.
+
 Suggested future walkthrough: under three minutes. Existing recorded demo: https://youtu.be/6lem4K_B9V8.
 The recorded video predates this usefulness repair; this script is not evidence of a new recording or upload.
 

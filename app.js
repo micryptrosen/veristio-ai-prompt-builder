@@ -17,6 +17,19 @@ const copyButton = document.querySelector("#copy-button");
 const sampleButton = document.querySelector("#sample-button");
 const resetButton = document.querySelector("#reset-button");
 const copyStatus = document.querySelector("#copy-status");
+let generatedInputs = null;
+
+function outputIsCurrent() {
+  return generatedInputs && Object.values(fields).every((field, index) => field.value === generatedInputs[index]);
+}
+
+function invalidateOutput() {
+  generatedInputs = null;
+  promptOutput.textContent = "Inputs changed. Choose Generate prompt to create current output.";
+  fieldReviewOutput.textContent = "Inputs changed. Generate prompt again to review current fields.";
+  renderChecklist(["Inputs changed; generate again for a current checklist."]);
+  updateStatus("Inputs changed; generate again");
+}
 
 const sampleScenario = {
   goal: "Draft a client update that explains a project delay and keeps confidence high.",
@@ -147,6 +160,7 @@ function generatePrompt() {
   promptOutput.textContent = generatedPrompt + "\n\n" + fieldReview;
   fieldReviewOutput.textContent = fieldReview;
   renderChecklist(buildChecklist(values));
+  generatedInputs = Object.values(fields).map((field) => field.value);
   updateStatus("Prompt ready");
 }
 
@@ -162,6 +176,12 @@ copyButton.addEventListener("click", async () => {
     return;
   }
 
+  if (!outputIsCurrent()) {
+    invalidateOutput();
+    return;
+  }
+  const copiedInputs = generatedInputs;
+
   if (!navigator.clipboard) {
     updateStatus("Select text to copy");
     selectPromptText();
@@ -170,8 +190,10 @@ copyButton.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(text);
+    if (generatedInputs !== copiedInputs || !outputIsCurrent()) return;
     updateStatus("Copied");
   } catch {
+    if (generatedInputs !== copiedInputs || !outputIsCurrent()) return;
     updateStatus("Copy blocked; text selected");
     selectPromptText();
   }
@@ -190,6 +212,7 @@ sampleButton.addEventListener("click", () => {
 });
 
 resetButton.addEventListener("click", () => {
+  generatedInputs = null;
   window.setTimeout(() => {
     promptOutput.textContent = "Complete the form, then choose Generate prompt.";
     fieldReviewOutput.textContent = "No generated field review yet.";
@@ -200,4 +223,10 @@ resetButton.addEventListener("click", () => {
     ]);
     updateStatus("Local only");
   }, 0);
+});
+
+Object.values(fields).forEach((field) => {
+  const onEdit = () => { if (generatedInputs) invalidateOutput(); };
+  field.addEventListener("input", onEdit);
+  field.addEventListener("change", onEdit);
 });
