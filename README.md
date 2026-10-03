@@ -1,5 +1,12 @@
 # AI Prompt Builder
 
+## Current Product Value - 2026-10-03
+
+Three bundled presets: Project brief, Lesson outline and Option comparison. Choose one and Load preset, add your context/source facts, then Generate prompt. Loading replaces all eight fields and clears omitted context/source notes. Field review and copied metadata distinguish preset-filled values, user edits, app defaults and omitted sections. Edits or another preset invalidate output until regenerated. No custom-preset saving, external AI call or generated-answer guarantee.
+
+This bounded addition is implemented and owner-accepted in the governed product home. This independent-history mirror carries only public-safe app/docs. Owner acceptance is not customer or production validation. Earlier dated preparation/update statements below are historical; they do not certify current publication status.
+Static local operation, no network dependency or input storage, and MIT license preserved. Existing demo predates these additions; no new recording/playback claim. Historical Skill Pack evidence remains post-prototype reconciliation, not original planning. The hackathon submission route remains abandoned; this is non-hackathon product continuation.
+
 ## Accepted Maintenance Prepared Locally - 2026-10-03
 
 Editing any of eight inputs clears the generated prompt, field review and checklist; regenerate before copy. Supplied/defaulted/omitted distinctions are preserved. Pending clipboard completion cannot restore obsolete status or fallback selection; an already initiated OS write cannot be revoked.

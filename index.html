@@ -25,6 +25,15 @@
             </div>
 
             <label>
+              <span>Reusable preset</span>
+              <select id="preset-select" aria-label="Reusable prompt preset">
+                <option value="brief">Project brief</option>
+                <option value="lesson">Lesson outline</option>
+                <option value="comparison">Option comparison</option>
+              </select>
+            </label>
+            <button type="button" id="load-preset">Load preset</button>
+            <label>
               <span>Goal</span>
               <textarea id="goal" rows="3" placeholder="What should the AI help accomplish?"></textarea>
             </label>

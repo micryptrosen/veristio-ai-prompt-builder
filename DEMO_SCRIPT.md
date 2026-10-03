@@ -1,5 +1,11 @@
 # Demo Script - AI Prompt Builder
 
+## Product Value Walkthrough - 2026-10-03
+
+Under three minutes: load a preset, fill missing context, generate and inspect preset/user/default metadata. Edit a field to invalidate output, regenerate, copy and reset; show another preset. Explain that the app assembles prompts locally, not AI answers.
+
+This is a future local walkthrough, not evidence of a new recording. Existing public demo predates these additions; no new playback or upload is claimed. Earlier walkthroughs below are historical. No Devpost submission.
+
 ## Current Maintenance Walkthrough - 2026-10-03
 
 Future walkthrough, under three minutes: Load sample and generate. Change audience/output format and clear context; attempt Copy before Generate. Confirm old prompt/review/checklist cleared, regenerate and inspect updated field metadata, copy or select current output, then reset.

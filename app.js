@@ -18,6 +18,22 @@ const sampleButton = document.querySelector("#sample-button");
 const resetButton = document.querySelector("#reset-button");
 const copyStatus = document.querySelector("#copy-status");
 let generatedInputs = null;
+let appliedPreset = null;
+
+const presets = {
+  brief: { name: "Project brief", goal: "Draft a project brief.", audience: "Project stakeholders", constraints: "Separate known facts from assumptions. Do not invent missing details.", tone: "Clear and practical", outputFormat: "Markdown brief", reviewFocus: "Check that the goal, scope, risks and next steps are clear." },
+  lesson: { name: "Lesson outline", goal: "Plan a short lesson on the topic in the context.", audience: "Beginners", constraints: "Use plain language and include a practice activity.", tone: "Patient and instructional", outputFormat: "Step-by-step plan", reviewFocus: "Check that activities match the learning goal and available time." },
+  comparison: { name: "Option comparison", goal: "Compare the options described in the source notes.", audience: "A decision maker", constraints: "Use only supplied facts; flag missing evidence.", tone: "Neutral and analytical", outputFormat: "Comparison table", reviewFocus: "Check tradeoffs, assumptions and open questions." }
+};
+
+document.querySelector("#load-preset").addEventListener("click", () => {
+  const preset = presets[document.querySelector("#preset-select").value];
+  if (!preset) return;
+  appliedPreset = preset;
+  Object.entries(fields).forEach(([key, field]) => { field.value = preset[key] || ""; });
+  invalidateOutput();
+  updateStatus("Preset loaded; generate prompt");
+});
 
 function outputIsCurrent() {
   return generatedInputs && Object.values(fields).every((field, index) => field.value === generatedInputs[index]);
@@ -125,7 +141,9 @@ function buildFieldReview(values) {
   return [
     "## Field Source Review (app-generated metadata)",
     ...Object.entries(labels).map(([key, label]) => values[key]
-      ? `- ${label}: supplied by user.`
+      ? appliedPreset && values[key] === appliedPreset[key]
+        ? `- ${label}: from preset "${appliedPreset.name}"; review before use.`
+        : `- ${label}: supplied by user.`
       : defaults[key]
         ? `- ${label}: not supplied; app default: ${defaults[key]}`
         : `- ${label}: not supplied; section omitted.`),
@@ -200,6 +218,7 @@ copyButton.addEventListener("click", async () => {
 });
 
 sampleButton.addEventListener("click", () => {
+  appliedPreset = null;
   fields.goal.value = sampleScenario.goal;
   fields.context.value = sampleScenario.context;
   fields.audience.value = sampleScenario.audience;
@@ -212,6 +231,7 @@ sampleButton.addEventListener("click", () => {
 });
 
 resetButton.addEventListener("click", () => {
+  appliedPreset = null;
   generatedInputs = null;
   window.setTimeout(() => {
     promptOutput.textContent = "Complete the form, then choose Generate prompt.";
