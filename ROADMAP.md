@@ -1,5 +1,11 @@
 # Roadmap
 
+## Post-Pages Accepted Product Updates - 2026-10-04
+
+Preset/sample loading asks for confirmation before discarding user-edited inputs. Cancel keeps the current fields, output, review and status. Blank or unchanged app-loaded fields retain quick loading. Confirm uses the normal preset/sample workflow; prompt assembly, freshness, field-source attribution, preset input review and copy behavior are unchanged.
+
+Next: collect concrete use feedback and separately scope improvements. No automatic product-to-mirror synchronization; further changes require review.
+
 ## Accepted Maintenance Prepared Locally - 2026-10-04
 
 Bundled presets now include optional input-review notes: real context for Project brief/Lesson outline and actual options/supporting facts for Option comparison. Supplied inputs receive an unverified relevance reminder. These notes appear in field review and copied metadata, never block generation and do not alter assembled prompt instructions. Defaults, omissions, attribution and freshness guards are unchanged.

@@ -1,5 +1,11 @@
 # Demo Script - AI Prompt Builder
 
+## Post-Pages Accepted Product Updates - 2026-10-04
+
+Load a preset, edit context and generate. Load sample or preset and Cancel; retain current work. Retry and confirm replacement, regenerate/copy as appropriate, reset and check blank quick loading.
+
+This is a current walkthrough, not evidence that the existing demo video was re-recorded.
+
 ## Accepted Maintenance Prepared Locally - 2026-10-04
 
 Load each preset, generate with missing context/source notes, then add the relevant input and regenerate. Compare optional advice and copied field metadata. Edit the goal or audience, regenerate, copy and reset; distinguish input review from verified relevance or an AI answer.

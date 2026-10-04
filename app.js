@@ -19,6 +19,17 @@ const resetButton = document.querySelector("#reset-button");
 const copyStatus = document.querySelector("#copy-status");
 let generatedInputs = null;
 let appliedPreset = null;
+let loadedInputs = Object.values(fields).map((field) => field.value);
+
+function confirmReplacement(values) {
+  const entries = Object.entries(fields);
+  const hasContent = entries.some(([, field]) => field.value.trim());
+  const replacesEdits = entries.some(([key, field], index) =>
+    field.value !== loadedInputs[index] && field.value !== (values[key] || ""));
+  return !hasContent || !replacesEdits || window.confirm(
+    "Replace your edited inputs? Loading this preset or sample replaces all prompt fields. Cancel to keep your current work."
+  );
+}
 
 const presets = {
   brief: { name: "Project brief", goal: "Draft a project brief.", audience: "Project stakeholders", constraints: "Separate known facts from assumptions. Do not invent missing details.", tone: "Clear and practical", outputFormat: "Markdown brief", reviewFocus: "Check that the goal, scope, risks and next steps are clear." },
@@ -29,8 +40,10 @@ const presets = {
 document.querySelector("#load-preset").addEventListener("click", () => {
   const preset = presets[document.querySelector("#preset-select").value];
   if (!preset) return;
+  if (!confirmReplacement(preset)) return;
   appliedPreset = preset;
   Object.entries(fields).forEach(([key, field]) => { field.value = preset[key] || ""; });
+  loadedInputs = Object.values(fields).map((field) => field.value);
   invalidateOutput();
   updateStatus("Preset loaded; generate prompt");
 });
@@ -234,6 +247,7 @@ copyButton.addEventListener("click", async () => {
 });
 
 sampleButton.addEventListener("click", () => {
+  if (!confirmReplacement(sampleScenario)) return;
   appliedPreset = null;
   fields.goal.value = sampleScenario.goal;
   fields.context.value = sampleScenario.context;
@@ -243,12 +257,14 @@ sampleButton.addEventListener("click", () => {
   fields.outputFormat.value = sampleScenario.outputFormat;
   fields.sourceNotes.value = sampleScenario.sourceNotes;
   fields.reviewFocus.value = sampleScenario.reviewFocus;
+  loadedInputs = Object.values(fields).map((field) => field.value);
   generatePrompt();
 });
 
 resetButton.addEventListener("click", () => {
   appliedPreset = null;
   generatedInputs = null;
+  loadedInputs = Object.values(fields).map(() => "");
   window.setTimeout(() => {
     promptOutput.textContent = "Complete the form, then choose Generate prompt.";
     fieldReviewOutput.textContent = "No generated field review yet.";
