@@ -1,5 +1,13 @@
 # Demo Script - AI Prompt Builder
 
+## Accepted Maintenance Prepared Locally - 2026-10-04
+
+Load each preset, generate with missing context/source notes, then add the relevant input and regenerate. Compare optional advice and copied field metadata. Edit the goal or audience, regenerate, copy and reset; distinguish input review from verified relevance or an AI answer.
+
+This accepted product-home repair is prepared in this local public-safe mirror, not yet pushed. Older dated preparation and publication notes remain historical. Static local-only operation and MIT license are preserved. Owner acceptance is not customer or production validation.
+Existing public demo predates this repair; this update does not claim a new recording or playback check. Devpost submission remains abandoned/held/not performed. Historical Skill Pack evidence remains unchanged post-prototype reconciliation, not original planning or current app mapping.
+
+
 ## Product Value Walkthrough - 2026-10-03
 
 Under three minutes: load a preset, fill missing context, generate and inspect preset/user/default metadata. Edit a field to invalidate output, regenerate, copy and reset; show another preset. Explain that the app assembles prompts locally, not AI answers.

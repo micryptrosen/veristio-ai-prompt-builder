@@ -128,6 +128,21 @@ function renderChecklist(items) {
   });
 }
 
+function buildPresetReview(values) {
+  if (!appliedPreset || values.goal !== appliedPreset.goal || values.audience !== appliedPreset.audience) return [];
+  const comparison = appliedPreset === presets.comparison;
+  const key = comparison ? "sourceNotes" : "context";
+  const label = comparison ? "source notes" : "context";
+  const suggestion = comparison
+    ? "consider adding the actual options and supporting facts"
+    : appliedPreset === presets.lesson
+      ? "consider adding the real lesson topic, learner context or available time"
+      : "consider adding real project facts or scope";
+  return [values[key]
+    ? `- Optional preset input review ("${appliedPreset.name}"): ${label} supplied; review it for relevance. This is not verification.`
+    : `- Optional preset input review ("${appliedPreset.name}"): ${label} not supplied; ${suggestion}. Generation is not blocked.`];
+}
+
 function buildFieldReview(values) {
   const labels = {
     goal: "Goal", context: "Context", audience: "Audience", constraints: "Constraints",
@@ -148,6 +163,7 @@ function buildFieldReview(values) {
         ? `- ${label}: not supplied; app default: ${defaults[key]}`
         : `- ${label}: not supplied; section omitted.`),
     "- Shared instructions: introduction, output expectations, base checklist and final instruction are app-authored; checklist wording also uses supplied audience, constraints and format when present.",
+    ...buildPresetReview(values),
     "This review describes the generated prompt inputs, not an AI answer or validation of prompt quality."
   ].join("\n");
 }

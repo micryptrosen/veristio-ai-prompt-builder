@@ -1,5 +1,13 @@
 # AI Prompt Builder
 
+## Accepted Maintenance Prepared Locally - 2026-10-04
+
+Bundled presets now include optional input-review notes: real context for Project brief/Lesson outline and actual options/supporting facts for Option comparison. Supplied inputs receive an unverified relevance reminder. These notes appear in field review and copied metadata, never block generation and do not alter assembled prompt instructions. Defaults, omissions, attribution and freshness guards are unchanged.
+
+This accepted product-home repair is prepared in this local public-safe mirror, not yet pushed. Older dated preparation and publication notes remain historical. Static local-only operation and MIT license are preserved. Owner acceptance is not customer or production validation.
+Existing public demo predates this repair; this update does not claim a new recording or playback check. Devpost submission remains abandoned/held/not performed. Historical Skill Pack evidence remains unchanged post-prototype reconciliation, not original planning or current app mapping.
+
+
 ## Current Product Value - 2026-10-03
 
 Three bundled presets: Project brief, Lesson outline and Option comparison. Choose one and Load preset, add your context/source facts, then Generate prompt. Loading replaces all eight fields and clears omitted context/source notes. Field review and copied metadata distinguish preset-filled values, user edits, app defaults and omitted sections. Edits or another preset invalidate output until regenerated. No custom-preset saving, external AI call or generated-answer guarantee.
