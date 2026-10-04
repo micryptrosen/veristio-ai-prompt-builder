@@ -1,5 +1,11 @@
 # AI Prompt Builder
 
+## Current Public-safe Snapshot - 2026-10-04
+
+Repeated copy attempts use only the latest operation's status/fallback completion. Edits, generation, reset and confirmed sample/preset replacement invalidate older completion; canceled replacement preserves current work. Prompt assembly and field-source/preset review remain unchanged.
+Earlier dated local-preparation/not-yet-pushed statements below describe historical checkpoints, not the current snapshot or today's publication result. Owner acceptance is not independent customer validation.
+Static local-only operation and MIT license preserved. Existing demo URLs and historical Skill Pack documentation are unchanged; physical-phone review remains deferred.
+
 ## Post-Pages Accepted Product Updates - 2026-10-04
 
 Preset/sample loading asks for confirmation before discarding user-edited inputs. Cancel keeps the current fields, output, review and status. Blank or unchanged app-loaded fields retain quick loading. Confirm uses the normal preset/sample workflow; prompt assembly, freshness, field-source attribution, preset input review and copy behavior are unchanged.

@@ -18,6 +18,7 @@ const sampleButton = document.querySelector("#sample-button");
 const resetButton = document.querySelector("#reset-button");
 const copyStatus = document.querySelector("#copy-status");
 let generatedInputs = null;
+let copyOperation = 0;
 let appliedPreset = null;
 let loadedInputs = Object.values(fields).map((field) => field.value);
 
@@ -53,6 +54,7 @@ function outputIsCurrent() {
 }
 
 function invalidateOutput() {
+  copyOperation += 1;
   generatedInputs = null;
   promptOutput.textContent = "Inputs changed. Choose Generate prompt to create current output.";
   fieldReviewOutput.textContent = "Inputs changed. Generate prompt again to review current fields.";
@@ -201,6 +203,7 @@ function selectPromptText() {
 }
 
 function generatePrompt() {
+  copyOperation += 1;
   const values = getValues();
   const generatedPrompt = buildPrompt(values);
   const fieldReview = buildFieldReview(values);
@@ -217,6 +220,7 @@ form.addEventListener("submit", (event) => {
 });
 
 copyButton.addEventListener("click", async () => {
+  const operation = ++copyOperation;
   const text = promptOutput.textContent.trim();
   if (!text || text === "Complete the form, then choose Generate prompt.") {
     updateStatus("Nothing to copy");
@@ -237,10 +241,10 @@ copyButton.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(text);
-    if (generatedInputs !== copiedInputs || !outputIsCurrent()) return;
+    if (operation !== copyOperation || generatedInputs !== copiedInputs || !outputIsCurrent()) return;
     updateStatus("Copied");
   } catch {
-    if (generatedInputs !== copiedInputs || !outputIsCurrent()) return;
+    if (operation !== copyOperation || generatedInputs !== copiedInputs || !outputIsCurrent()) return;
     updateStatus("Copy blocked; text selected");
     selectPromptText();
   }
@@ -262,6 +266,7 @@ sampleButton.addEventListener("click", () => {
 });
 
 resetButton.addEventListener("click", () => {
+  copyOperation += 1;
   appliedPreset = null;
   generatedInputs = null;
   loadedInputs = Object.values(fields).map(() => "");

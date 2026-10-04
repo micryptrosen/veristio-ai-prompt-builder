@@ -1,5 +1,12 @@
 # Demo Script - AI Prompt Builder
 
+## Current Public-safe Snapshot - 2026-10-04
+
+Generate from a preset, inspect field-source review, try repeated Copy, then edit and regenerate. Cancel and confirm replacement in turn; reset. Existing defaults and omissions remain visible.
+This is a current walkthrough, not a claim that the existing public video was re-recorded.
+Earlier dated local-preparation/not-yet-pushed statements below describe historical checkpoints, not the current snapshot or today's publication result. Owner acceptance is not independent customer validation.
+Static local-only operation and MIT license preserved. Existing demo URLs and historical Skill Pack documentation are unchanged; physical-phone review remains deferred.
+
 ## Post-Pages Accepted Product Updates - 2026-10-04
 
 Load a preset, edit context and generate. Load sample or preset and Cancel; retain current work. Retry and confirm replacement, regenerate/copy as appropriate, reset and check blank quick loading.
